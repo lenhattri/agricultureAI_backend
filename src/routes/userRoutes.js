@@ -6,7 +6,7 @@ const {
     updateUser,
     deleteUser
 } = require('../controllers/userController');
-
+const authenticateToken = require('../utils/authenticateToken')
 const router = express.Router();
 
 // Define routes and map them to controller functions
