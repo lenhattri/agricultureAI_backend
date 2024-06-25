@@ -19,7 +19,7 @@ const googleAuth = async (req, res) => {
   }
 
   // Tạo JWT token
-  const jwtToken = jwt.sign({ id: existingUser._id, email: existingUser.email, name: existingUser.name }, JWT_SECRET, { expiresIn: '1h' });
+  const jwtToken = jwt.sign({ id: existingUser._id, email: existingUser.email, name: existingUser.name }, JWT_SECRET, { expiresIn: '30d' });
   res.json({ token: jwtToken, newUser });
 };
 
