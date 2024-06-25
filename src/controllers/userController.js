@@ -10,8 +10,8 @@ const getUsers = async (req, res) => {
 };
 
 const createUser = async (req, res) => {
-    const { username, email, password } = req.body;
-    const newUser = new User({ username, email, password });
+    const { name, email, password } = req.body;
+    const newUser = new User({ username: name, email, password });
     try {
         await newUser.save();
         res.status(201).json(newUser);
